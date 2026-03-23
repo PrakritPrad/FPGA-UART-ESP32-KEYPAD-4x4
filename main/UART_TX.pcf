@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Mar 23 09:52:06 2026
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Tx" LOCATE = SITE "P23" LEVEL 1;
+COMP "RelayCtl" LOCATE = SITE "P1" LEVEL 1;
+COMP "Buzzer" LOCATE = SITE "P83" LEVEL 1;
+COMP "K2_COL<0>" LOCATE = SITE "P12" LEVEL 1;
+COMP "K2_COL<1>" LOCATE = SITE "P10" LEVEL 1;
+COMP "K2_COL<2>" LOCATE = SITE "P8" LEVEL 1;
+COMP "K2_COL<3>" LOCATE = SITE "P6" LEVEL 1;
+COMP "SysClk" LOCATE = SITE "P123" LEVEL 1;
+COMP "K2_ROW<0>" LOCATE = SITE "P24" LEVEL 1;
+COMP "K2_ROW<1>" LOCATE = SITE "P22" LEVEL 1;
+COMP "K2_ROW<2>" LOCATE = SITE "P17" LEVEL 1;
+COMP "K2_ROW<3>" LOCATE = SITE "P15" LEVEL 1;
+SCHEMATIC END;
+

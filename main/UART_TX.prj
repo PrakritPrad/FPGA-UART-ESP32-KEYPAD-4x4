@@ -1,0 +1,4 @@
+vhdl work "../uart_tx_core.vhd"
+vhdl work "../pin_lock_fsm.vhd"
+vhdl work "../keypad_scanner.vhd"
+vhdl work "../top.vhd"

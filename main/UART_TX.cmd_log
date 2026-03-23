@@ -1,0 +1,161 @@
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 
+xst -intstyle ise -ifn "/home/ise/Digital_vm/test/main/UART_TX.xst" -ofn "/home/ise/Digital_vm/test/main/UART_TX.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o UART_TX_map.ncd UART_TX.ngd UART_TX.pcf 
+par -w -intstyle ise -ol high -mt off UART_TX_map.ncd UART_TX.ncd UART_TX.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml UART_TX.twx UART_TX.ncd -o UART_TX.twr UART_TX.pcf 
+bitgen -intstyle ise -f UART_TX.ut UART_TX.ncd 

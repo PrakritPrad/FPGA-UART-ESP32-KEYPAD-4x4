@@ -1,0 +1,26 @@
+# ==============================================================================
+# UART TX Test Constraints for Surveyor-6 XC6SLX9
+# ==============================================================================
+
+# Clock Input (20 MHz oscillator)
+NET "SysClk" LOC = P123 | IOSTANDARD = LVCMOS33;
+NET "Tx"     LOC = P23  | IOSTANDARD = LVCMOS33;
+NET "RelayCtl" LOC = P1 | IOSTANDARD = LVCMOS33;
+NET "Buzzer"   LOC = P83 | IOSTANDARD = LVCMOS33;
+
+# 4x4 Keypad mapping (requested orientation):
+# start from keypad side near key 'F' at P24, then wire sequentially to the right:
+# P24, P22, P17, P15, P12, P10, P8, P6
+# Assumed keypad pin order = R1,R2,R3,R4,C1,C2,C3,C4.
+
+# 4x4 Keypad rows (outputs, active low)
+NET "K2_ROW<0>" LOC = P24 | IOSTANDARD = LVCMOS33;
+NET "K2_ROW<1>" LOC = P22 | IOSTANDARD = LVCMOS33;
+NET "K2_ROW<2>" LOC = P17 | IOSTANDARD = LVCMOS33;
+NET "K2_ROW<3>" LOC = P15 | IOSTANDARD = LVCMOS33;
+
+# 4x4 Keypad columns (inputs with pull-up)
+NET "K2_COL<0>" LOC = P12 | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "K2_COL<1>" LOC = P10 | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "K2_COL<2>" LOC = P8  | IOSTANDARD = LVCMOS33 | PULLUP;
+NET "K2_COL<3>" LOC = P6  | IOSTANDARD = LVCMOS33 | PULLUP;
