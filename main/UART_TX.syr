@@ -108,16 +108,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/ise/Digital_vm/test/uart_tx_core.vhd" into library work
+Parsing VHDL file "/home/ise/Digital_vm/backup_keypad/full_2_lastest/uart_tx_core.vhd" into library work
 Parsing entity <uart_tx_core>.
 Parsing architecture <rtl> of entity <uart_tx_core>.
-Parsing VHDL file "/home/ise/Digital_vm/test/pin_lock_fsm.vhd" into library work
+Parsing VHDL file "/home/ise/Digital_vm/backup_keypad/full_2_lastest/pin_lock_fsm.vhd" into library work
 Parsing entity <pin_lock_fsm>.
 Parsing architecture <Behavioral> of entity <pin_lock_fsm>.
-Parsing VHDL file "/home/ise/Digital_vm/test/keypad_scanner.vhd" into library work
+Parsing VHDL file "/home/ise/Digital_vm/backup_keypad/full_2_lastest/keypad_scanner.vhd" into library work
 Parsing entity <keypad_scanner>.
 Parsing architecture <Behavioral> of entity <keypad_scanner>.
-Parsing VHDL file "/home/ise/Digital_vm/test/top.vhd" into library work
+Parsing VHDL file "/home/ise/Digital_vm/backup_keypad/full_2_lastest/top.vhd" into library work
 Parsing entity <UART_TX>.
 Parsing architecture <Behavioral> of entity <uart_tx>.
 
@@ -138,14 +138,14 @@ Elaborating entity <uart_tx_core> (architecture <rtl>) from library <work>.
 =========================================================================
 
 Synthesizing Unit <UART_TX>.
-    Related source file is "/home/ise/Digital_vm/test/top.vhd".
-INFO:Xst:3210 - "/home/ise/Digital_vm/test/top.vhd" line 24: Output port <frame_strobe> of the instance <scanner_i> is unconnected or connected to loadless signal.
+    Related source file is "/home/ise/Digital_vm/backup_keypad/full_2_lastest/top.vhd".
+INFO:Xst:3210 - "/home/ise/Digital_vm/backup_keypad/full_2_lastest/top.vhd" line 26: Output port <frame_strobe> of the instance <scanner_i> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <UART_TX> synthesized.
 
 Synthesizing Unit <keypad_scanner>.
-    Related source file is "/home/ise/Digital_vm/test/keypad_scanner.vhd".
+    Related source file is "/home/ise/Digital_vm/backup_keypad/full_2_lastest/keypad_scanner.vhd".
         ROW_HOLD_CYCLES = 5000
     Found 13-bit register for signal <row_timer>.
     Found 1-bit register for signal <scan_found>.
@@ -168,7 +168,8 @@ Synthesizing Unit <keypad_scanner>.
 Unit <keypad_scanner> synthesized.
 
 Synthesizing Unit <pin_lock_fsm>.
-    Related source file is "/home/ise/Digital_vm/test/pin_lock_fsm.vhd".
+    Related source file is "/home/ise/Digital_vm/backup_keypad/full_2_lastest/pin_lock_fsm.vhd".
+    Found 24-bit register for signal <fail_led_timer>.
     Found 16-bit register for signal <release_timer>.
     Found 1-bit register for signal <key_released>.
     Found 1-bit register for signal <tx_start_i>.
@@ -192,45 +193,44 @@ Synthesizing Unit <pin_lock_fsm>.
     Found 4-bit register for signal <pin_ref<2>>.
     Found 4-bit register for signal <pin_ref<3>>.
     Found 8-bit register for signal <event_data>.
-    Found 6-bit register for signal <buzz_pwm_ctr>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
     | Transitions        | 46                                             |
     | Inputs             | 14                                             |
-    | Outputs            | 5                                              |
+    | Outputs            | 9                                              |
     | Clock              | clk (rising_edge)                              |
     | Power Up State     | locked                                         |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 6-bit adder for signal <buzz_pwm_ctr[5]_GND_6_o_add_1_OUT> created at line 112.
-    Found 3-bit adder for signal <entry_count[2]_GND_6_o_add_183_OUT> created at line 287.
-    Found 7-bit adder for signal <n0686[6:0]> created at line 289.
+    Found 3-bit adder for signal <entry_count[2]_GND_6_o_add_183_OUT> created at line 283.
+    Found 7-bit adder for signal <n0700[6:0]> created at line 285.
     Found 3-bit adder for signal <fail_count[2]_GND_6_o_add_308_OUT> created at line 331.
-    Found 16-bit subtractor for signal <GND_6_o_GND_6_o_sub_8_OUT<15:0>> created at line 123.
-    Found 23-bit subtractor for signal <GND_6_o_GND_6_o_sub_15_OUT<22:0>> created at line 148.
-    Found 19-bit subtractor for signal <GND_6_o_GND_6_o_sub_17_OUT<18:0>> created at line 150.
-    Found 28-bit subtractor for signal <GND_6_o_GND_6_o_sub_35_OUT<27:0>> created at line 196.
-    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_193_OUT<2:0>> created at line 293.
-    Found 4-bit comparator equal for signal <pin_ref[0][3]_pin_buf[0][3]_equal_140_o> created at line 61
-    Found 4-bit comparator equal for signal <pin_ref[1][3]_pin_buf[1][3]_equal_141_o> created at line 62
-    Found 4-bit comparator equal for signal <pin_ref[2][3]_pin_buf[2][3]_equal_142_o> created at line 63
-    Found 4-bit comparator equal for signal <pin_ref[3][3]_pin_buf[3][3]_equal_143_o> created at line 64
-    Found 3-bit comparator greater for signal <entry_count[2]_PWR_6_o_LessThan_178_o> created at line 285
-    Found 3-bit comparator greater for signal <GND_6_o_entry_count[2]_LessThan_192_o> created at line 292
-    Found 23-bit comparator greater for signal <GND_6_o_buzz_timer[22]_LessThan_14_o> created at line 424
-    Found 6-bit comparator greater for signal <buzz_pwm_ctr[5]_GND_6_o_LessThan_374_o> created at line 424
+    Found 24-bit subtractor for signal <GND_6_o_GND_6_o_sub_5_OUT<23:0>> created at line 115.
+    Found 16-bit subtractor for signal <GND_6_o_GND_6_o_sub_8_OUT<15:0>> created at line 122.
+    Found 23-bit subtractor for signal <GND_6_o_GND_6_o_sub_15_OUT<22:0>> created at line 147.
+    Found 19-bit subtractor for signal <GND_6_o_GND_6_o_sub_17_OUT<18:0>> created at line 149.
+    Found 28-bit subtractor for signal <GND_6_o_GND_6_o_sub_33_OUT<27:0>> created at line 189.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_193_OUT<2:0>> created at line 289.
+    Found 4-bit comparator equal for signal <pin_ref[0][3]_pin_buf[0][3]_equal_140_o> created at line 62
+    Found 4-bit comparator equal for signal <pin_ref[1][3]_pin_buf[1][3]_equal_141_o> created at line 63
+    Found 4-bit comparator equal for signal <pin_ref[2][3]_pin_buf[2][3]_equal_142_o> created at line 64
+    Found 4-bit comparator equal for signal <pin_ref[3][3]_pin_buf[3][3]_equal_143_o> created at line 65
+    Found 3-bit comparator greater for signal <entry_count[2]_PWR_6_o_LessThan_178_o> created at line 281
+    Found 3-bit comparator greater for signal <GND_6_o_entry_count[2]_LessThan_192_o> created at line 288
+    Found 23-bit comparator greater for signal <buzzer> created at line 424
+    Found 24-bit comparator greater for signal <GND_6_o_fail_led_timer[23]_LessThan_381_o> created at line 431
     Summary:
 	inferred   9 Adder/Subtractor(s).
-	inferred 152 D-type flip-flop(s).
+	inferred 170 D-type flip-flop(s).
 	inferred   8 Comparator(s).
-	inferred 179 Multiplexer(s).
+	inferred 186 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <pin_lock_fsm> synthesized.
 
 Synthesizing Unit <uart_tx_core>.
-    Related source file is "/home/ise/Digital_vm/test/uart_tx_core.vhd".
+    Related source file is "/home/ise/Digital_vm/backup_keypad/full_2_lastest/uart_tx_core.vhd".
     Found 12-bit register for signal <clk_count>.
     Found 4-bit register for signal <bit_index>.
     Found 8-bit register for signal <shift_reg>.
@@ -251,7 +251,7 @@ Synthesizing Unit <uart_tx_core>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 12-bit adder for signal <clk_count[11]_GND_7_o_add_7_OUT> created at line 75.
-    Found 1-bit 9-to-1 multiplexer for signal <bit_index[3]_PWR_14_o_Mux_4_o> created at line 41.
+    Found 1-bit 9-to-1 multiplexer for signal <bit_index[3]_PWR_15_o_Mux_4_o> created at line 41.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  22 D-type flip-flop(s).
@@ -272,11 +272,11 @@ Macro Statistics
  19-bit subtractor                                     : 1
  2-bit adder                                           : 1
  23-bit subtractor                                     : 1
+ 24-bit subtractor                                     : 1
  28-bit subtractor                                     : 1
  3-bit adder                                           : 2
  3-bit subtractor                                      : 1
  4-bit adder                                           : 1
- 6-bit adder                                           : 1
  7-bit adder                                           : 1
 # Registers                                            : 34
  1-bit register                                        : 11
@@ -286,22 +286,22 @@ Macro Statistics
  19-bit register                                       : 1
  2-bit register                                        : 1
  23-bit register                                       : 1
+ 24-bit register                                       : 1
  28-bit register                                       : 1
  3-bit register                                        : 2
  4-bit register                                        : 10
- 6-bit register                                        : 1
  8-bit register                                        : 3
 # Comparators                                          : 8
  23-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
  3-bit comparator greater                              : 2
  4-bit comparator equal                                : 4
- 6-bit comparator greater                              : 1
-# Multiplexers                                         : 192
- 1-bit 2-to-1 multiplexer                              : 84
+# Multiplexers                                         : 199
+ 1-bit 2-to-1 multiplexer                              : 97
  1-bit 9-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 1
- 19-bit 2-to-1 multiplexer                             : 14
- 23-bit 2-to-1 multiplexer                             : 21
+ 19-bit 2-to-1 multiplexer                             : 13
+ 23-bit 2-to-1 multiplexer                             : 16
  3-bit 2-to-1 multiplexer                              : 8
  4-bit 2-to-1 multiplexer                              : 33
  8-bit 2-to-1 multiplexer                              : 30
@@ -332,7 +332,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_row_out> will be implemented on LUTs
 Unit <keypad_scanner> synthesized (advanced).
 
 Synthesizing (advanced) Unit <pin_lock_fsm>.
-The following registers are absorbed into counter <buzz_pwm_ctr>: 1 register on signal <buzz_pwm_ctr>.
+The following registers are absorbed into counter <fail_led_timer>: 1 register on signal <fail_led_timer>.
 The following registers are absorbed into counter <release_timer>: 1 register on signal <release_timer>.
 The following registers are absorbed into counter <lockout_timer>: 1 register on signal <lockout_timer>.
 Unit <pin_lock_fsm> synthesized (advanced).
@@ -359,20 +359,20 @@ Macro Statistics
  13-bit up counter                                     : 1
  16-bit down counter                                   : 1
  2-bit up counter                                      : 1
+ 24-bit down counter                                   : 1
  28-bit down counter                                   : 1
- 6-bit up counter                                      : 1
 # Registers                                            : 123
  Flip-Flops                                            : 123
 # Comparators                                          : 8
  23-bit comparator greater                             : 1
+ 24-bit comparator greater                             : 1
  3-bit comparator greater                              : 2
  4-bit comparator equal                                : 4
- 6-bit comparator greater                              : 1
-# Multiplexers                                         : 191
- 1-bit 2-to-1 multiplexer                              : 84
+# Multiplexers                                         : 198
+ 1-bit 2-to-1 multiplexer                              : 97
  1-bit 9-to-1 multiplexer                              : 1
- 19-bit 2-to-1 multiplexer                             : 14
- 23-bit 2-to-1 multiplexer                             : 21
+ 19-bit 2-to-1 multiplexer                             : 13
+ 23-bit 2-to-1 multiplexer                             : 16
  3-bit 2-to-1 multiplexer                              : 8
  4-bit 2-to-1 multiplexer                              : 33
  8-bit 2-to-1 multiplexer                              : 30
@@ -422,20 +422,19 @@ Optimizing unit <pin_lock_fsm> ...
 Optimizing unit <uart_tx_core> ...
 WARNING:Xst:1293 - FF/Latch <uart_i/shift_reg_7> has a constant value of 0 in block <UART_TX>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <scanner_i/frame_strobe_i> of sequential type is unconnected in block <UART_TX>.
-INFO:Xst:2261 - The FF/Latch <scanner_i/row_timer_0> in Unit <UART_TX> is equivalent to the following FF/Latch, which will be removed : <lock_i/buzz_pwm_ctr_0> 
-INFO:Xst:2261 - The FF/Latch <scanner_i/row_timer_1> in Unit <UART_TX> is equivalent to the following FF/Latch, which will be removed : <lock_i/buzz_pwm_ctr_1> 
-INFO:Xst:2261 - The FF/Latch <scanner_i/row_timer_2> in Unit <UART_TX> is equivalent to the following FF/Latch, which will be removed : <lock_i/buzz_pwm_ctr_2> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block UART_TX, actual ratio is 8.
-FlipFlop lock_i/key_held has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block UART_TX, actual ratio is 9.
+FlipFlop lock_i/key_held has been replicated 2 time(s)
 FlipFlop lock_i/key_released has been replicated 2 time(s)
+FlipFlop lock_i/state_FSM_FFd1 has been replicated 1 time(s)
 FlipFlop lock_i/state_FSM_FFd2 has been replicated 1 time(s)
-FlipFlop scanner_i/key_code_i_0 has been replicated 1 time(s)
-FlipFlop scanner_i/key_code_i_1 has been replicated 1 time(s)
+FlipFlop lock_i/state_FSM_FFd3 has been replicated 1 time(s)
+FlipFlop scanner_i/key_code_i_0 has been replicated 2 time(s)
+FlipFlop scanner_i/key_code_i_1 has been replicated 2 time(s)
 FlipFlop scanner_i/key_code_i_2 has been replicated 1 time(s)
-FlipFlop scanner_i/key_code_i_3 has been replicated 1 time(s)
+FlipFlop scanner_i/key_code_i_3 has been replicated 2 time(s)
 FlipFlop scanner_i/key_valid_i has been replicated 2 time(s)
 
 Final Macro Processing ...
@@ -444,8 +443,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 210
- Flip-Flops                                            : 210
+# Registers                                            : 237
+ Flip-Flops                                            : 237
 
 =========================================================================
 
@@ -468,29 +467,29 @@ Top Level Output File Name         : UART_TX.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 658
+# BELS                             : 762
 #      GND                         : 1
-#      INV                         : 71
-#      LUT1                        : 26
-#      LUT2                        : 13
-#      LUT3                        : 34
-#      LUT4                        : 99
-#      LUT5                        : 54
-#      LUT6                        : 135
-#      MUXCY                       : 110
-#      MUXF7                       : 3
+#      INV                         : 96
+#      LUT1                        : 27
+#      LUT2                        : 19
+#      LUT3                        : 39
+#      LUT4                        : 65
+#      LUT5                        : 66
+#      LUT6                        : 169
+#      MUXCY                       : 138
+#      MUXF7                       : 6
 #      VCC                         : 1
-#      XORCY                       : 111
-# FlipFlops/Latches                : 210
-#      FD                          : 98
-#      FDE                         : 54
-#      FDR                         : 20
-#      FDRE                        : 38
+#      XORCY                       : 135
+# FlipFlops/Latches                : 237
+#      FD                          : 52
+#      FDE                         : 58
+#      FDR                         : 22
+#      FDRE                        : 105
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 11
+# IO Buffers                       : 13
 #      IBUF                        : 4
-#      OBUF                        : 7
+#      OBUF                        : 9
 
 Device utilization summary:
 ---------------------------
@@ -499,20 +498,20 @@ Selected Device : 6slx9tqg144-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             210  out of  11440     1%  
- Number of Slice LUTs:                  432  out of   5720     7%  
-    Number used as Logic:               432  out of   5720     7%  
+ Number of Slice Registers:             237  out of  11440     2%  
+ Number of Slice LUTs:                  481  out of   5720     8%  
+    Number used as Logic:               481  out of   5720     8%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    470
-   Number with an unused Flip Flop:     260  out of    470    55%  
-   Number with an unused LUT:            38  out of    470     8%  
-   Number of fully used LUT-FF pairs:   172  out of    470    36%  
-   Number of unique control sets:        19
+ Number of LUT Flip Flop pairs used:    525
+   Number with an unused Flip Flop:     288  out of    525    54%  
+   Number with an unused LUT:            44  out of    525     8%  
+   Number of fully used LUT-FF pairs:   193  out of    525    36%  
+   Number of unique control sets:        27
 
 IO Utilization: 
- Number of IOs:                          12
- Number of bonded IOBs:                  12  out of    102    11%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    102    13%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -538,7 +537,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-SysClk                             | BUFGP                  | 210   |
+SysClk                             | BUFGP                  | 237   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -549,9 +548,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 7.221ns (Maximum Frequency: 138.478MHz)
-   Minimum input arrival time before clock: 4.591ns
-   Maximum output required time after clock: 6.416ns
+   Minimum period: 7.027ns (Maximum Frequency: 142.301MHz)
+   Minimum input arrival time before clock: 4.702ns
+   Maximum output required time after clock: 6.054ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -560,35 +559,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SysClk'
-  Clock period: 7.221ns (frequency: 138.478MHz)
-  Total number of paths / destination ports: 21080 / 358
+  Clock period: 7.027ns (frequency: 142.301MHz)
+  Total number of paths / destination ports: 36193 / 525
 -------------------------------------------------------------------------
-Delay:               7.221ns (Levels of Logic = 5)
-  Source:            scanner_i/key_code_i_3 (FF)
+Delay:               7.027ns (Levels of Logic = 5)
+  Source:            lock_i/pin_ref_2_3 (FF)
   Destination:       lock_i/event_data_6 (FF)
   Source Clock:      SysClk rising
   Destination Clock: SysClk rising
 
-  Data Path: scanner_i/key_code_i_3 to lock_i/event_data_6
+  Data Path: lock_i/pin_ref_2_3 to lock_i/event_data_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             20   0.447   1.321  scanner_i/key_code_i_3 (scanner_i/key_code_i_3)
-     LUT4:I1->O           17   0.205   1.028  lock_i/_n2251<0>1 (lock_i/_n2251<0>)
-     LUT6:I5->O            2   0.205   0.617  lock_i/Mmux_GND_6_o_GND_6_o_MUX_347_o12101_SW0 (N26)
-     LUT6:I5->O           16   0.205   1.005  lock_i/Mmux_GND_6_o_GND_6_o_MUX_347_o12101 (lock_i/Mmux_GND_6_o_GND_6_o_MUX_347_o1210)
-     LUT6:I5->O            4   0.205   0.684  lock_i/Mmux_event_data[7]_GND_6_o_mux_351_OUT71 (lock_i/event_data[7]_GND_6_o_mux_351_OUT<6>)
-     LUT5:I4->O            7   0.205   0.773  lock_i/_n1569_inv1 (lock_i/_n1569_inv)
+     FDE:C->Q              1   0.447   0.944  lock_i/pin_ref_2_3 (lock_i/pin_ref_2_3)
+     LUT6:I0->O            3   0.203   1.015  lock_i/state_FSM_FFd2-In2214 (lock_i/state_FSM_FFd2-In2214)
+     LUT6:I0->O            3   0.203   0.651  lock_i/state_FSM_FFd2-In2217_1 (lock_i/state_FSM_FFd2-In2217)
+     LUT6:I5->O           14   0.205   1.205  lock_i/Mmux_GND_6_o_GND_6_o_MUX_393_o133 (lock_i/Mmux_GND_6_o_GND_6_o_MUX_393_o11)
+     LUT6:I2->O            3   0.203   0.651  lock_i/Mmux_event_data[7]_GND_6_o_mux_354_OUT71 (lock_i/event_data[7]_GND_6_o_mux_354_OUT<6>)
+     LUT6:I5->O            7   0.205   0.773  lock_i/_n1561_inv1 (lock_i/_n1561_inv)
      FDE:CE                    0.322          lock_i/event_data_0
     ----------------------------------------
-    Total                      7.221ns (1.794ns logic, 5.427ns route)
-                                       (24.8% logic, 75.2% route)
+    Total                      7.027ns (1.788ns logic, 5.239ns route)
+                                       (25.4% logic, 74.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SysClk'
-  Total number of paths / destination ports: 112 / 28
+  Total number of paths / destination ports: 136 / 34
 -------------------------------------------------------------------------
-Offset:              4.591ns (Levels of Logic = 3)
+Offset:              4.702ns (Levels of Logic = 3)
   Source:            K2_COL<0> (PAD)
   Destination:       scanner_i/key_code_i_3 (FF)
   Destination Clock: SysClk rising
@@ -598,18 +597,18 @@ Offset:              4.591ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             7   1.222   1.021  K2_COL_0_IBUF (K2_COL_0_IBUF)
-     LUT4:I0->O            5   0.203   0.819  scanner_i/Mmux_col_in[3]_PWR_5_o_MUX_3_o11 (scanner_i/col_in[3]_PWR_5_o_MUX_3_o)
-     LUT5:I3->O            8   0.203   0.802  scanner_i/_n0109_inv1 (scanner_i/_n0109_inv)
+     LUT4:I0->O            6   0.203   0.849  scanner_i/Mmux_col_in[3]_PWR_5_o_MUX_3_o11 (scanner_i/col_in[3]_PWR_5_o_MUX_3_o)
+     LUT5:I3->O           11   0.203   0.882  scanner_i/_n0109_inv1 (scanner_i/_n0109_inv)
      FDE:CE                    0.322          scanner_i/key_code_i_0
     ----------------------------------------
-    Total                      4.591ns (1.950ns logic, 2.641ns route)
-                                       (42.5% logic, 57.5% route)
+    Total                      4.702ns (1.950ns logic, 2.752ns route)
+                                       (41.5% logic, 58.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SysClk'
-  Total number of paths / destination ports: 39 / 7
+  Total number of paths / destination ports: 62 / 9
 -------------------------------------------------------------------------
-Offset:              6.416ns (Levels of Logic = 8)
+Offset:              6.054ns (Levels of Logic = 8)
   Source:            lock_i/buzz_timer_0 (FF)
   Destination:       Buzzer (PAD)
   Source Clock:      SysClk rising
@@ -618,18 +617,18 @@ Offset:              6.416ns (Levels of Logic = 8)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               4   0.447   1.028  lock_i/buzz_timer_0 (lock_i/buzz_timer_0)
-     LUT5:I0->O            1   0.203   0.000  lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_lut<0> (lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<0> (lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<1> (lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<2> (lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<3> (lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<3>)
-     MUXCY:CI->O           1   0.213   0.944  lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<4> (lock_i/Mcompar_GND_6_o_buzz_timer[22]_LessThan_14_o_cy<4>)
-     LUT6:I0->O            1   0.203   0.579  lock_i/buzzer (Buzzer_OBUF)
+     FDRE:C->Q             4   0.447   1.028  lock_i/buzz_timer_0 (lock_i/buzz_timer_0)
+     LUT5:I0->O            1   0.203   0.000  lock_i/Mcompar_buzzer_lut<0> (lock_i/Mcompar_buzzer_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  lock_i/Mcompar_buzzer_cy<0> (lock_i/Mcompar_buzzer_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  lock_i/Mcompar_buzzer_cy<1> (lock_i/Mcompar_buzzer_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  lock_i/Mcompar_buzzer_cy<2> (lock_i/Mcompar_buzzer_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  lock_i/Mcompar_buzzer_cy<3> (lock_i/Mcompar_buzzer_cy<3>)
+     MUXCY:CI->O           1   0.213   0.579  lock_i/Mcompar_buzzer_cy<4> (lock_i/Mcompar_buzzer_cy<4>)
+     INV:I->O              1   0.206   0.579  lock_i/Mcompar_buzzer_cy<4>_inv1_INV_0 (Buzzer_OBUF)
      OBUF:I->O                 2.571          Buzzer_OBUF (Buzzer)
     ----------------------------------------
-    Total                      6.416ns (3.866ns logic, 2.550ns route)
-                                       (60.3% logic, 39.7% route)
+    Total                      6.054ns (3.869ns logic, 2.185ns route)
+                                       (63.9% logic, 36.1% route)
 
 =========================================================================
 
@@ -641,21 +640,21 @@ Clock to Setup on destination clock SysClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SysClk         |    7.221|         |         |         |
+SysClk         |    7.027|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.70 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.51 secs
  
 --> 
 
 
-Total memory usage is 489976 kilobytes
+Total memory usage is 490184 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

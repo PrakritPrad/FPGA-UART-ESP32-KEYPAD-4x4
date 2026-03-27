@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Mar 23 09:52:06 2026
+// Written by: Map P.20131013 on Fri Mar 27 13:00:04 2026
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -15,5 +15,7 @@ COMP "K2_ROW<0>" LOCATE = SITE "P24" LEVEL 1;
 COMP "K2_ROW<1>" LOCATE = SITE "P22" LEVEL 1;
 COMP "K2_ROW<2>" LOCATE = SITE "P17" LEVEL 1;
 COMP "K2_ROW<3>" LOCATE = SITE "P15" LEVEL 1;
+COMP "GREEN_LED" LOCATE = SITE "P16" LEVEL 1;
+COMP "RED_LED" LOCATE = SITE "P21" LEVEL 1;
 SCHEMATIC END;
 

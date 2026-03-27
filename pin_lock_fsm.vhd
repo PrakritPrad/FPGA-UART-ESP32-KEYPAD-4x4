@@ -11,7 +11,9 @@ entity pin_lock_fsm is
 		tx_start  : out std_logic;
 		tx_data   : out std_logic_vector(7 downto 0);
 		relay_ctl : out std_logic;
-		buzzer    : out std_logic
+		buzzer    : out std_logic;
+		red_led   : out std_logic;
+		green_led : out std_logic
 	);
 end pin_lock_fsm;
 
@@ -25,8 +27,7 @@ architecture Behavioral of pin_lock_fsm is
 	constant BUZZ_SHORT      : integer := 1000000; -- 50 ms
 	constant BUZZ_LONG       : integer := 8000000; -- 400 ms
 	constant BUZZ_GAP        : integer := 400000;  -- 20 ms
-	constant BUZZ_PWM_PERIOD : integer := 63;
-	constant BUZZ_PWM_ON     : integer := 1;
+	constant FAIL_LED_CYCLES : integer := 10000000; -- 500 ms
 	constant KEY_GUARD_CYCLES: integer := 120000; -- ~6 ms @ 20 MHz
 	constant RELEASE_CONFIRM_CYCLES: integer := 50000; -- ~2.5 ms @ 20 MHz
 
@@ -51,7 +52,7 @@ architecture Behavioral of pin_lock_fsm is
 	signal buzz_timer        : integer range 0 to BUZZ_LONG := 0;
 	signal buzz_gap_timer    : integer range 0 to BUZZ_GAP := 0;
 	signal buzz_double_next  : std_logic := '0';
-	signal buzz_pwm_ctr      : integer range 0 to BUZZ_PWM_PERIOD := 0;
+	signal fail_led_timer    : integer range 0 to FAIL_LED_CYCLES := 0;
 
 	function buffer_matches_pin(
 		buf : pin_array_t;
@@ -106,14 +107,12 @@ begin
 			do_send_digit := '0';
 			digit_ascii := (others => '0');
 
-			if buzz_pwm_ctr = BUZZ_PWM_PERIOD then
-				buzz_pwm_ctr <= 0;
-			else
-				buzz_pwm_ctr <= buzz_pwm_ctr + 1;
-			end if;
-
 			if key_guard_timer > 0 then
 				key_guard_timer <= key_guard_timer - 1;
+			end if;
+
+			if fail_led_timer > 0 then
+				fail_led_timer <= fail_led_timer - 1;
 			end if;
 
 			-- Release detection: confirm button was released for stable period
@@ -185,12 +184,6 @@ begin
 				key_held <= '0';
 			end if;
 
-			if new_key_evt = '1' then
-				buzz_timer <= BUZZ_SHORT;
-				buzz_gap_timer <= 0;
-				buzz_double_next <= '0';
-			end if;
-
 			if state = LOCKOUT then
 				if lockout_timer > 0 then
 					lockout_timer <= lockout_timer - 1;
@@ -224,8 +217,8 @@ begin
 								entry_count <= 0;
 								do_send_u := '1';
 								buzz_timer <= BUZZ_SHORT;
-								buzz_gap_timer <= BUZZ_GAP;
-								buzz_double_next <= '1';
+								buzz_gap_timer <= 0;
+								buzz_double_next <= '0';
 							else
 								do_fail := '1';
 								entry_count <= 0;
@@ -239,6 +232,9 @@ begin
 							relay_i <= '0';
 							entry_count <= 0;
 							do_send_k := '1';
+							buzz_timer <= BUZZ_SHORT;
+							buzz_gap_timer <= 0;
+							buzz_double_next <= '0';
 						elsif is_g_key = '1' then
 							state <= VERIFY_OLD_FOR_CHANGE;
 							entry_count <= 0;
@@ -324,6 +320,10 @@ begin
 
 			if do_fail = '1' then
 				do_send_o := '1';
+				fail_led_timer <= FAIL_LED_CYCLES;
+				buzz_timer <= BUZZ_SHORT;
+				buzz_gap_timer <= BUZZ_GAP;
+				buzz_double_next <= '1';
 				if fail_count = 4 then
 					do_lockout := '1';
 					fail_count <= 5;
@@ -421,7 +421,21 @@ begin
 	tx_start <= tx_start_i;
 	tx_data <= tx_data_i;
 	relay_ctl <= not relay_i;
-	buzzer <= '1' when (buzz_timer > 0) and (buzz_pwm_ctr < BUZZ_PWM_ON) else '0';
+	buzzer <= '1' when (buzz_timer > 0) else '0';
+
+	red_led <= '1' when
+		(state = LOCKED) or
+		(state = LOCKOUT) or
+		(state = VERIFY_OLD_FOR_CHANGE) or
+		(state = SET_NEW_PIN) or
+		(fail_led_timer > 0)
+	else '0';
+
+	green_led <= '1' when
+		(state = UNLOCKED) or
+		(state = VERIFY_OLD_FOR_CHANGE) or
+		(state = SET_NEW_PIN)
+	else '0';
 
 end Behavioral;
 

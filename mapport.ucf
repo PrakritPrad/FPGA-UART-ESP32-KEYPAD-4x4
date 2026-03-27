@@ -7,6 +7,8 @@ NET "SysClk" LOC = P123 | IOSTANDARD = LVCMOS33;
 NET "Tx"     LOC = P23  | IOSTANDARD = LVCMOS33;
 NET "RelayCtl" LOC = P1 | IOSTANDARD = LVCMOS33;
 NET "Buzzer"   LOC = P83 | IOSTANDARD = LVCMOS33;
+NET "RED_LED"   LOC = P21 | IOSTANDARD = LVCMOS33;
+NET "GREEN_LED" LOC = P16 | IOSTANDARD = LVCMOS33;
 
 # 4x4 Keypad mapping (requested orientation):
 # start from keypad side near key 'F' at P24, then wire sequentially to the right:

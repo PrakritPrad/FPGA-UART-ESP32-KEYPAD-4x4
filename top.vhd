@@ -9,7 +9,9 @@ entity UART_TX is
         K2_ROW : out std_logic_vector(3 downto 0);
         Tx     : out std_logic;  -- UART TX
         RelayCtl : out std_logic;
-        Buzzer : out std_logic
+        Buzzer : out std_logic;
+        RED_LED   : out std_logic;
+        GREEN_LED : out std_logic
     );
 end UART_TX;
 
@@ -40,7 +42,9 @@ begin
             tx_start  => tx_start,
             tx_data   => tx_data,
             relay_ctl => RelayCtl,
-            buzzer    => Buzzer
+            buzzer    => Buzzer,
+            red_led   => RED_LED,
+            green_led => GREEN_LED
         );
 
     uart_i: entity work.uart_tx_core

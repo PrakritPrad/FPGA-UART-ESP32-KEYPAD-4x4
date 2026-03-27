@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/ise/Digital_vm/test/main/UART_TX.ncd
-OUTFILE=/home/ise/Digital_vm/test/main/UART_TX.bit
+INFILE=/home/ise/Digital_vm/backup_keypad/full_2_lastest/main/UART_TX.ncd
+OUTFILE=/home/ise/Digital_vm/backup_keypad/full_2_lastest/main/UART_TX.bit
 FAMILY=Spartan6
 PART=xc6slx9-3tqg144
-WORKINGDIR=/home/ise/Digital_vm/test/main
+WORKINGDIR=/home/ise/Digital_vm/backup_keypad/full_2_lastest/main
 LICENSE=ISE
 USER_INFO=8416_11442_1478797146_620

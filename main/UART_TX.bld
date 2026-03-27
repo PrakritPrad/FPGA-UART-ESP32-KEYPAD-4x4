@@ -2,15 +2,17 @@ Release 14.7 ngdbuild P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
-ise -dd _ngo -nt timestamp -uc /home/ise/Digital_vm/test/mapport.ucf -p
+ise -dd _ngo -nt timestamp -uc
+/home/ise/Digital_vm/backup_keypad/full_2_lastest/mapport.ucf -p
 xc6slx9-tqg144-3 UART_TX.ngc UART_TX.ngd
 
-Reading NGO file "/home/ise/Digital_vm/test/main/UART_TX.ngc" ...
+Reading NGO file
+"/home/ise/Digital_vm/backup_keypad/full_2_lastest/main/UART_TX.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file
-"/home/ise/Digital_vm/test/mapport.ucf" ...
+"/home/ise/Digital_vm/backup_keypad/full_2_lastest/mapport.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 Done...
@@ -28,10 +30,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 500540 kilobytes
+Total memory usage is 500884 kilobytes
 
 Writing NGD file "UART_TX.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec
-Total CPU time to NGDBUILD completion:   1 sec
+Total CPU time to NGDBUILD completion:   2 sec
 
 Writing NGDBUILD log file "UART_TX.bld"...

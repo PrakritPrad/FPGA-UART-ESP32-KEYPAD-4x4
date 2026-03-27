@@ -36,10 +36,10 @@ Setup/Hold to clock SysClk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-K2_COL<0>   |    3.304(R)|      SLOW  |   -0.023(R)|      SLOW  |SysClk_BUFGP      |   0.000|
-K2_COL<1>   |    3.434(R)|      SLOW  |    0.098(R)|      SLOW  |SysClk_BUFGP      |   0.000|
-K2_COL<2>   |    3.773(R)|      SLOW  |    0.085(R)|      SLOW  |SysClk_BUFGP      |   0.000|
-K2_COL<3>   |    3.435(R)|      SLOW  |   -0.115(R)|      SLOW  |SysClk_BUFGP      |   0.000|
+K2_COL<0>   |    4.132(R)|      SLOW  |    0.526(R)|      SLOW  |SysClk_BUFGP      |   0.000|
+K2_COL<1>   |    4.142(R)|      SLOW  |    0.241(R)|      SLOW  |SysClk_BUFGP      |   0.000|
+K2_COL<2>   |    4.493(R)|      SLOW  |    0.281(R)|      SLOW  |SysClk_BUFGP      |   0.000|
+K2_COL<3>   |    4.832(R)|      SLOW  |   -0.031(R)|      SLOW  |SysClk_BUFGP      |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock SysClk to Pad
@@ -47,13 +47,15 @@ Clock SysClk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-Buzzer      |        13.173(R)|      SLOW  |         5.546(R)|      FAST  |SysClk_BUFGP      |   0.000|
-K2_ROW<0>   |         9.917(R)|      SLOW  |         5.612(R)|      FAST  |SysClk_BUFGP      |   0.000|
-K2_ROW<1>   |         9.701(R)|      SLOW  |         5.501(R)|      FAST  |SysClk_BUFGP      |   0.000|
-K2_ROW<2>   |         9.678(R)|      SLOW  |         5.468(R)|      FAST  |SysClk_BUFGP      |   0.000|
-K2_ROW<3>   |         9.432(R)|      SLOW  |         5.327(R)|      FAST  |SysClk_BUFGP      |   0.000|
-RelayCtl    |         9.716(R)|      SLOW  |         5.477(R)|      FAST  |SysClk_BUFGP      |   0.000|
-Tx          |         8.546(R)|      SLOW  |         4.739(R)|      FAST  |SysClk_BUFGP      |   0.000|
+Buzzer      |        10.845(R)|      SLOW  |         5.690(R)|      FAST  |SysClk_BUFGP      |   0.000|
+GREEN_LED   |         9.525(R)|      SLOW  |         5.371(R)|      FAST  |SysClk_BUFGP      |   0.000|
+K2_ROW<0>   |         9.889(R)|      SLOW  |         5.401(R)|      FAST  |SysClk_BUFGP      |   0.000|
+K2_ROW<1>   |         9.673(R)|      SLOW  |         5.290(R)|      FAST  |SysClk_BUFGP      |   0.000|
+K2_ROW<2>   |         9.230(R)|      SLOW  |         5.063(R)|      FAST  |SysClk_BUFGP      |   0.000|
+K2_ROW<3>   |         9.310(R)|      SLOW  |         5.081(R)|      FAST  |SysClk_BUFGP      |   0.000|
+RED_LED     |        11.544(R)|      SLOW  |         5.306(R)|      FAST  |SysClk_BUFGP      |   0.000|
+RelayCtl    |        10.021(R)|      SLOW  |         5.630(R)|      FAST  |SysClk_BUFGP      |   0.000|
+Tx          |         8.242(R)|      SLOW  |         4.550(R)|      FAST  |SysClk_BUFGP      |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock SysClk
@@ -61,18 +63,18 @@ Clock to Setup on destination clock SysClk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-SysClk         |    8.170|         |         |         |
+SysClk         |    7.025|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Mar 23 09:52:21 2026 
+Analysis completed Fri Mar 27 13:00:19 2026 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 387 MB
+Peak Memory Usage: 388 MB
 
 
 
