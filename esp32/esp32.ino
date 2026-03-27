@@ -16,13 +16,13 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 #define RXD2 16   // รับจาก FPGA
 #define TXD2 -1   // ไม่ใช้ TX
 
-// WiFi credentials
-const char *ssid = "CE-HCRL606_2.4GHz";
-const char *password = "HCRLSixZeroSeven607";
+// Demo credentials for public repository. Replace before real deployment.
+const char *ssid = "DEMO_WIFI_SSID";
+const char *password = "DEMO_WIFI_PASSWORD";
 
-// Telegram Bot credentials
-const char *botToken = "8727261057:AAFLJzh6vqyrsofwM0EwyRbLymBPdGcBu6Q";
-const char *MASTER_CODE = "CECS";  // Master verification code
+// Demo Telegram settings for public repository. Replace with your own values.
+const char *botToken = "0000000000:DEMO_TELEGRAM_BOT_TOKEN";
+const char *MASTER_CODE = "DEMO";  // Master verification code
 
 WiFiClientSecure client;
 UniversalTelegramBot bot(botToken, client);
